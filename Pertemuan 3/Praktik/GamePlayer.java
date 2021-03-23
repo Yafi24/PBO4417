@@ -1,12 +1,12 @@
-public class GameEnemy {
+public class GamePlayer {
     double width;
     double height;
-    int positionX;
+    int positionX = 60;
     int positionY;
-
-    public GameEnemy(){}
-    public GameEnemy(double width, double height){}
-    public GameEnemy(double width, double height, int positionX, int positionY){}
+        
+    public GamePlayer(){}
+    public GamePlayer(double width, double height){}
+    public GamePlayer(double width, double height, int positionX, int positionY){}
     public void setdimension(double width, double height){
         this.width = width;
         this.height = height;
@@ -21,13 +21,17 @@ public class GameEnemy {
     public double getheight(){
         return this.height;
     }
-    public int getX(){
-        return this.positionX;
-    }
     public int getY(){
         return this.positionY;
     }
+    public int getX(){
+        return this.positionX;
+    }
     public void run(){
-        System.out.println("Enemy is Running");
+        System.out.println("Player is Running");
+    }
+    public void Run(int increment){
+        positionX = positionX + increment;
+        System.out.println("Player still Running ........ current position of the player : " + positionX);
     }
 }
